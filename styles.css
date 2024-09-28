@@ -177,7 +177,7 @@ h3 {
     text-align: left;
     margin: 0 auto;
     width: 70%;
-    margin-top: 160px; /* Adjusted margin to ensure no overlap with upload box */
+    margin-top: 160px; 
 }
 
 .profile-form label {
