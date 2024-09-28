@@ -10,8 +10,8 @@ body {
 
 .container {
     display: flex;
-    justify-content: space-around;
-    width: 95%; /* Adjusted width to fit all boxes */
+    justify-content: space-between;
+    width: 95%;
 }
 
 .box {
@@ -21,7 +21,8 @@ body {
     text-align: center;
     padding: 20px;
     margin: 10px;
-    flex-basis: 15%; /*  all 4 boxes */
+    flex-basis: 15%;
+    height: 200px;
     transition: transform 0.3s ease;
 }
 
@@ -30,7 +31,8 @@ body {
 }
 
 .box-login {
-    flex-basis: 30%; /*  login box */
+    flex-basis: 45%;
+    height: 300px;
     background-color: #edf7fc;
 }
 
@@ -69,4 +71,58 @@ h3 {
 
 .login-form .new-id-btn:hover {
     background-color: #218838;
+}
+
+/* Popup styling */
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup-content {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 300px;
+    position: relative;
+}
+
+.popup-content input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.popup-content button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.popup-content button:hover {
+    background-color: #0056b3;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    cursor: pointer;
 }
