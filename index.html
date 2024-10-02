@@ -15,17 +15,20 @@
         </div>
         
         <div class="box">
-            <h3>Repository</h3>
+            <h3><a href="repository.html" style="text-decoration: none; color: inherit;">Repository</a></h3>
             <p>Access academic materials and resources</p>
         </div>
+        
         <div class="box">
             <h3>Forum</h3>
             <p>Participate in discussions and ask questions</p>
         </div>
-        <div class="box">
+        
+        <div class="box" onclick="openExamPopup()">
             <h3>Exam</h3>
             <p>Schedule and take your exams online</p>
         </div>
+        
         <div class="box box-login">
             <h3>Login</h3>
             <div class="login-form">
@@ -52,14 +55,52 @@
         </div>
     </div>
 
-    <script>
+    <div id="exam-popup" class="popup">
+        <div class="popup-content">
+            <span class="close-btn" onclick="closeExamPopup()">&times;</span>
+            <h3>Exam Type</h3>
+            <form onsubmit="submitExamType(); return false;">
+                <label>
+                    <input type="radio" name="examType" value="online" required> Online
+                </label><br>
+                <label>
+                    <input type="radio" name="examType" value="offline" required> Offline
+                </label><br>
+                <button type="submit" class="submit-btn">Submit</button>
+            </form>
+        </div>
+    </div>
 
+    <script>
+        // open Create New ID popup
         function openPopup() {
             document.getElementById("popup").style.display = "block";
         }
 
+        //  close Create New ID popup
         function closePopup() {
             document.getElementById("popup").style.display = "none";
+        }
+
+        // open Exam Registration popup
+        function openExamPopup() {
+            document.getElementById("exam-popup").style.display = "block";
+        }
+
+        //close Exam Registration popup
+        function closeExamPopup() {
+            document.getElementById("exam-popup").style.display = "none";
+        }
+
+        //handle the exam type selection
+        function submitExamType() {
+            const selectedType = document.querySelector('input[name="examType"]:checked').value;
+            
+            if (selectedType === "offline") {
+                alert("Offline exams are not available at the moment.");
+            } else if (selectedType === "online") {
+                window.location.href = "exam.html"; 
+            }
         }
     </script>
 
