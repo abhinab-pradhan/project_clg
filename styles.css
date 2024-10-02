@@ -127,8 +127,6 @@ h3 {
     cursor: pointer;
 }
 
-
-
 .profile-container {
     background-color: #ffffff;
     padding: 30px;
@@ -205,5 +203,44 @@ h3 {
 }
 
 .profile-form button:hover {
+    background-color: #0056b3;
+}
+
+.repository-container {
+    background-color: #ffffff;
+    padding: 20px; 
+    margin: 50px auto;
+    width: 50%; 
+    height: 450px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden; 
+}
+
+.top-image {
+    width: 160px; /* Set image width */
+    height: auto; 
+    position: absolute;
+    top: 100px; 
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 80%; 
+}
+
+
+.result-container button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.result-container button:hover {
     background-color: #0056b3;
 }
