@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Exam</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="exam-container">
+        <h2>Question <span id="question-number">1</span> of 10</h2>
+        <div id="question-container">
+            <!-- Questions will be injected here -->
+        </div>
+
+        <div class="navigation">
+            <button id="prev-btn" onclick="prevQuestion()" disabled>Previous</button>
+            <button id="next-btn" onclick="nextQuestion()">Next</button>
+        </div>
+
+        <div class="timer">
+            <span id="timer">15:00</span>
+        </div>
+
+        <div class="submit-container">
+            <button id="submit-btn" onclick="submitExam()" style="display:none;">Finish</button>
+        </div>
+    </div>
+
+    <script src="exam.js"></script>
+</body>
+</html>

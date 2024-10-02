@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam Result</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="result-container">
+        <h2>Exam Results</h2>
+        <p id="result-text"></p>
+        <button onclick="goHome()">Return to Home</button>
+    </div>
+
+    <script>
+        // Retrieve the results from localStorage
+        let correctAnswers = localStorage.getItem('correctAnswers');
+        let totalQuestions = localStorage.getItem('totalQuestions');
+
+        // Display the results
+        document.getElementById('result-text').innerText = `You got ${correctAnswers} out of ${totalQuestions} correct.`;
+
+        // Clear localStorage to reset for future exams
+        localStorage.removeItem('correctAnswers');
+        localStorage.removeItem('totalQuestions');
+
+        //  redirect to home page
+        function goHome() {
+            window.location.href = "index.html";
+        }
+    </script>
+</body>
+</html>
